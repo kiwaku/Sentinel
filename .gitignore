@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment and config
+.env
+config/config.json
+config/profile.json
+
+# Data and logs
+data/
+logs/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Backups
+*.db.backup
+*.backup
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Additional security
+config/credentials.json
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup folders  
+backups/
+
+# Test environment (optional)
+# test_environment/

@@ -1,0 +1,57 @@
+{
+  "name": "Your Name",
+  "email": "your-email@example.com",
+  "interests": [
+    "machine learning",
+    "artificial intelligence",
+    "data science",
+    "software engineering",
+    "research",
+    "fellowships",
+    "grants",
+    "conferences",
+    "workshops"
+  ],
+  "exclusions": [
+    "pyramid scheme",
+    "mlm",
+    "get rich quick",
+    "binary options"
+  ],
+  "preferred_opportunities": [
+    "fellowship",
+    "research position", 
+    "internship",
+    "conference",
+    "workshop",
+    "grant"
+  ],
+  "preferred_locations": [
+    "remote",
+    "san francisco",
+    "new york",
+    "boston",
+    "seattle"
+  ],
+  "career_stage": "early_career",
+  "experience_level": "intermediate",
+  "minimum_relevance_score": 0.7,
+  "keywords": {
+    "high_priority": [
+      "fellowship",
+      "research",
+      "AI",
+      "machine learning"
+    ],
+    "medium_priority": [
+      "conference",
+      "workshop",
+      "internship"
+    ],
+    "exclusions": [
+      "sales",
+      "marketing",
+      "mlm"
+    ]
+  }
+}

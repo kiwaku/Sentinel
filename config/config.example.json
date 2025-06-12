@@ -1,0 +1,37 @@
+{
+  "email": {
+    "imap_server": "imap.gmail.com",
+    "imap_port": 993,
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "username": "YOUR_EMAIL_FROM_ENV",
+    "password": "YOUR_PASSWORD_FROM_ENV",
+    "use_oauth": false,
+    "oauth_credentials_path": "config/credentials.json"
+  },
+  "llm": {
+    "provider": "together_ai",
+    "model": "YOUR_MODEL_FROM_ENV",
+    "api_key": "YOUR_API_KEY_FROM_ENV",
+    "max_tokens": 2048,
+    "temperature": 0.0
+  },
+  "processing": {
+    "batch_size": 20,
+    "max_emails_per_run": 200,
+    "similarity_threshold": 0.75,
+    "days_back_initial": 7
+  },
+  "storage": {
+    "database_path": "data/sentinel.db",
+    "logs_directory": "logs/",
+    "backup_retention_days": 90
+  },
+  "summary": {
+    "send_daily_summary": true,
+    "summary_time": "08:00",
+    "recipient_email": "YOUR_EMAIL_FROM_ENV",
+    "max_high_priority": 10,
+    "max_exploratory": 15
+  }
+}
