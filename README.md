@@ -2,7 +2,7 @@
 
 An intelligent email processing system that automatically identifies and extracts opportunities from your inbox using AI.
 
-## ✨ Features
+## Features
 
 - **AI-Powered Extraction**: Uses LLM to identify relevant opportunities from emails
 - **Smart Filtering**: Personalized filtering based on your interests and preferences
@@ -12,7 +12,7 @@ An intelligent email processing system that automatically identifies and extract
 - **Secure Configuration**: Environment-based credential management
 - **Local Storage**: All data stored locally with SQLite database
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone and Setup
 
@@ -65,14 +65,14 @@ python3 cli.py profile
 python3 main.py
 ```
 
-## 📋 Commands
+## Commands
 
 - `python3 cli.py search <keyword>` - Search existing opportunities
 - `python3 cli.py profile` - Update your profile interactively
 - `python3 main.py` - Run full email processing pipeline
 - `python3 list_accounts.py` - List configured email accounts
 
-## 🔧 Configuration
+## Configuration
 
 ### Email Setup
 
@@ -110,14 +110,14 @@ Edit `config/profile.json` to set:
 - Opportunity types you're looking for
 - Locations and exclusions
 
-## 🛡️ Security
+## Security
 
 - All sensitive data is stored in `.env` (not committed to Git)
 - Database files are excluded from version control
 - No credentials are hardcoded in source code
 - All email processing happens locally
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run comprehensive system validation
@@ -127,7 +127,58 @@ python3 test_environment/final_validator.py
 python3 test_environment/validator.py
 ```
 
-## 📁 Project Structure
+<details>
+<summary><strong>Key Technologies Used</strong></summary>
+
+#### Large Language Models (LLM)
+- Integration with Together AI API for AI-powered opportunity extraction  
+- DSPy framework for advanced prompt engineering and LLM orchestration  
+- Support for multiple LLM providers (Together AI, Ollama)
+
+#### Natural Language Processing
+- Semantic filtering using sentence embeddings  
+- Text similarity scoring with cosine similarity  
+- Adaptive thresholding for intelligent content relevance detection  
+- Named Entity Recognition for organization and opportunity extraction
+
+#### Machine Learning
+- Sentence-Transformers for semantic text comparison  
+- Vector embeddings for content similarity analysis  
+- Interest-based scoring with supervised classification  
+- Profile-based opportunity ranking
+
+#### Data Management
+- SQLite database for local data storage  
+- Pandas for structured data manipulation  
+- Pydantic for data validation and schema enforcement  
+- JSON-based configuration management
+
+#### Email Processing
+- IMAP/SMTP protocol implementation  
+- Multi-account email management  
+- HTML parsing and text extraction  
+- Metadata processing and entity extraction
+
+#### Security & Privacy
+- Environment-based credential management (`python-dotenv`)  
+- Local processing of sensitive email data  
+- App-specific password support  
+- Secure environment variable handling
+
+#### System Architecture
+- Modular service-oriented design  
+- Configurable pipeline with extensible components  
+- Fallback mechanisms for service degradation  
+- Comprehensive logging and error handling
+
+#### Testing & Reliability
+- Comprehensive test suite for components and end-to-end validation  
+- Automated validation of system functionality  
+- Performance monitoring for resource usage  
+- Memory leak detection
+
+</details>
+## Project Structure
 
 ```
 sentinel/
@@ -145,7 +196,7 @@ sentinel/
 └── requirements.txt     # Python dependencies
 ```
 
-## 🔧 Configuration Reference
+## Configuration Reference
 
 ### Email Settings
 | Setting | Description | Example |
@@ -175,7 +226,7 @@ sentinel/
 | `similarity_threshold` | Deduplication threshold | `0.8` |
 | `days_back_initial` | Initial lookback period | `7` |
 
-## 🔄 Workflow
+## Workflow
 
 1. **Email Ingestion** - Connects to your email accounts
 2. **AI Analysis** - LLM evaluates emails for opportunities  
@@ -183,11 +234,11 @@ sentinel/
 4. **Storage** - Saves opportunities to local database
 5. **Summarization** - Sends daily email summaries
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
-**❌ Email Connection Failed**
+** Email Connection Failed**
 ```bash
 # Test email settings
 python3 main.py test
@@ -196,7 +247,7 @@ python3 main.py test
 # Verify IMAP/SMTP settings for your provider
 ```
 
-**❌ No Opportunities Found**
+** No Opportunities Found**
 ```bash
 # Check your profile settings
 python3 cli.py profile
@@ -213,7 +264,7 @@ python3 cli.py profile
 | Outlook | `outlook.office365.com:993` | `smtp.office365.com:587` | Works with regular password |
 | Yahoo | `imap.mail.yahoo.com:993` | `smtp.mail.yahoo.com:587` | Requires App Password |
 
-## 🔐 Security & Privacy
+## Security & Privacy
 
 - **Local Processing**: All data stays on your machine
 - **Secure Storage**: SQLite database with local file access only
@@ -232,7 +283,7 @@ python3 cli.py profile
 
 MIT License - see LICENSE file for details
 
-## 🆘 Support
+## Support
 
 - Check the test environment for validation
 - Review configuration templates
